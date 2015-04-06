@@ -1,0 +1,12 @@
+{
+  "name": "PushNotificationSample",
+  "version": "0.0.1",
+  "description": "Push Notification Sample App ============================ A sample mobile application built with [Ionic](http://ionicframework.com) and [ngCordova](http://ngcordova.com/) to demonstrate how to register for and receive push notifications on iOS and Android. Once the device registration token is received, it is sent to a locally running node service where it will be stored for  later use when a push notification needs to be broadcast to all subscribed devices using [node-pushserver](https://www.npmjs.org/package/node-pushserver).  The setup to use node-pushserver is discussed more below but see the npm site for specific setup details.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tsubik/PushNotificationSample.git"
+  },
+  "dependencies": {
+    "node-gcm": "~0.9.15"
+  }
+}
