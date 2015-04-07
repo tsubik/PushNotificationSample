@@ -1,8 +1,9 @@
 var gcm = require('node-gcm');
+var secrets = require('./secrets.json');
 var message = new gcm.Message();
 
 //API Server Key
-var sender = new gcm.Sender('PUBLIC_API_KEY');
+var sender = new gcm.Sender(secrets.GCM_API_KEY);
 var registrationIds = [];
 
 // Value the payload data to send...
@@ -16,7 +17,7 @@ message.addData('msgcnt','3'); // Shows up in the notification in the status bar
 message.timeToLive = 3000;// Duration in seconds to hold in GCM and retry before timing out. Default 4 weeks (2,419,200 seconds) if not specified.
 
 // At least one reg id/token is required
-registrationIds.push('Reg-Token');
+registrationIds.push(secrets.DEVICE_TOKEN);
 
 /**
  * Parameters: message-literal, registrationIds-array, No. of retries, callback-function
